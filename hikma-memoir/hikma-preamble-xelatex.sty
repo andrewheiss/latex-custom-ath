@@ -59,10 +59,10 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
 \addbibresource{/Users/andrew/Research/Publications.bib}
 
 %   %% these tweak the biblatex-chicago format to conform to AJS style.
-   \DeclareFieldFormat[article]{title}{\mkbibquote{#1}}
-   \DeclareFieldFormat[book]{title}{%
-   \mkbibemph{#1}\isdot} % for books
-\DeclareFieldFormat{booktitle}{\mkbibemph{#1}} % for edited volumes
+%    \DeclareFieldFormat[article]{title}{\mkbibquote{#1}}
+%    \DeclareFieldFormat[book]{title}{%
+%    \mkbibemph{#1}\isdot} % for books
+% \DeclareFieldFormat{booktitle}{\mkbibemph{#1}} % for edited volumes
 
 %% bibnamedash: with Minion Pro the three-emdash lines in the
 %% bibliogrpaphy end up separated from one another, which is very
@@ -79,5 +79,17 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
   \definecolor{bg}{rgb}{0.95,0.95,0.95}
   \setkeys{Gin}{width=1\@textwidth} 
 }{}
+
+
+% Command for manually adding hanging indents to bibliographies
+\newcommand{\hangstart}%
+{\setlength{\parindent}{-0.2in}%
+\setlength{\leftskip}{0.2in}%
+% \setlength{\parskip}{4pt}%
+\noindent}
+
+\usepackage[all,defaultlines=2]{nowidow}  % Fix widows and orphans
+
+\urlstyle{same}  % Don't typeset URLs in a monospaced font
 
 \endinput
