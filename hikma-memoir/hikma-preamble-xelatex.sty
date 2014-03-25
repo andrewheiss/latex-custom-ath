@@ -92,4 +92,10 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
 
 \urlstyle{same}  % Don't typeset URLs in a monospaced font
 
+% Sans serif tables
+\let\newfloat\undefined  % Necessary because floatrow and memoir are technically incompatible
+\usepackage{floatrow}
+% \floatsetup[longtable]{font={sf}}
+\floatsetup[longtable]{font={rm}}
+
 \endinput
