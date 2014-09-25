@@ -79,8 +79,8 @@
     \captionnamefont{\small\sffamily}
 
     % TOC stuff
-    % \settocdepth{chapter}
-    \maxsecnumdepth{chapter} 
+    \settocdepth{subsubsection}
+    \maxsecnumdepth{subsubsection} 
     \setsecnumdepth{chapter}
 
     % Set name of bibliography to 'references'
@@ -110,6 +110,14 @@
     % \renewcommand{\cftchapterpresnum}{\sffamily} 
     % %\renewcommand{\cftchapterleader}{} 
     % %\renewcommand{\cftchapterafterpnum}{\cftparfillskip}
+}
+
+\makechapterstyle{hikma-article-numbered} {
+  \chapterstyle{hikma-article}  % Copy previous style
+  \counterwithout{section}{chapter}  % Make sections start at 1, not 0
+  \settocdepth{subsubsection}
+  \maxsecnumdepth{subsubsection} 
+  \setsecnumdepth{subsubsection}
 }
 
 %-----------------------------------
