@@ -72,6 +72,8 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
 %% Pagestyle
 \pagestyle{ath}
 
+\setlength{\parindent}{15pt}
+
 %% If [minted] option is chosen, activate minted
 \ifthenelse{\boolean{@minted}}{
   \RequirePackage{minted}
@@ -83,8 +85,8 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
 
 % Command for manually adding hanging indents to bibliographies
 \newcommand{\hangstart}%
-{\setlength{\parindent}{-0.2in}%
-\setlength{\leftskip}{0.2in}%
+{\setlength{\parindent}{-15pt}%
+\setlength{\leftskip}{15pt}%
 % \setlength{\parskip}{4pt}%
 \noindent}
 
