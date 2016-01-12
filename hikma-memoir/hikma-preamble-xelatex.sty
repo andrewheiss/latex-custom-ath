@@ -97,8 +97,8 @@ pdfpagelabels, bookmarksnumbered]{hyperref}
 % Sans serif tables
 \let\newfloat\undefined  % Necessary because floatrow and memoir are technically incompatible
 \usepackage{floatrow}
-% \floatsetup[longtable]{font={sf}}
-\floatsetup[longtable]{font={rm}}
+\floatsetup[longtable]{font={sf,scriptsize}}
+%\floatsetup[longtable]{font={rm}}
 
 \usepackage{pdflscape}  % For landscape PDF pages
 \usepackage{pbox}  % For multi-line table cells
