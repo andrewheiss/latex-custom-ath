@@ -124,6 +124,33 @@
   \setsecnumdepth{subsubsection}
 }
 
+
+% ---------------
+% Chapter style
+% ---------------
+\makechapterstyle{hikma-chapter} {
+    \chapterstyle{hikma-article}  % Copy previous style
+    \setlength{\beforechapskip}{3\baselineskip}
+    % \renewcommand{\chapterheadstart}{\vspace*{\beforechapskip}\hrule\medskip}
+    \renewcommand*{\chapterheadstart}{\vspace*{\beforechapskip}}
+    \renewcommand{\chapnamefont}{\small\sffamily\scshape}
+    \renewcommand{\chapnumfont}{\small\sffamily}
+    \renewcommand{\chaptitlefont}{\huge\sffamily\upshape}
+
+    % Leading
+    %\preto\chaptitlefont{\linespread{3}}
+
+    % Title 
+    \pretitle{\begin{center}\huge\sffamily\bfseries}
+    \posttitle{\end{center}}
+    % \posttitle{\end{center}\par\vskip 1.5em}
+    \preauthor{\begin{center}\Large\sffamily}
+    \postauthor{\end{center}}
+    \predate{\begin{center}\sffamily\footnotesize\vspace{0.9em}}
+    \postdate{\end{center}}
+    % \postdate{\end{center}\par\vskip 2em}
+}
+
 %-----------------------------------
 % Memo style (for short documents)
 %-----------------------------------
@@ -150,12 +177,12 @@
     \setaftersecskip{1.7ex}
 
     % Title 
-    \pretitle{\begin{flushleft}\LARGE\sffamily\bfseries}
-    \posttitle{\end{flushleft}\par\vskip 0.5em}
-    \preauthor{\begin{flushleft}\Large\sffamily}
-    \postauthor{\end{flushleft}}
-    \predate{\begin{flushleft}\sffamily\footnotesize\vspace{0.9em}}
-    \postdate{\end{flushleft}\par\vskip 2em}
+    % \pretitle{\begin{flushleft}\LARGE\sffamily\bfseries}
+    % \posttitle{\end{flushleft}\par\vskip 0.5em}
+    % \preauthor{\begin{flushleft}\Large\sffamily}
+    % \postauthor{\end{flushleft}}
+    % \predate{\begin{flushleft}\sffamily\footnotesize\vspace{0.9em}}
+    % \postdate{\end{flushleft}\par\vskip 2em}
 }
 
 %------------------------------
@@ -250,8 +277,8 @@
     \markright{##1}}
 }
 \makepsmarks{athgit}{\@athgitmarks}
-\makeevenhead{athgit}{}{}{\scshape\thepage}
-\makeoddhead{athgit}{}{}{\scshape\thepage}
+\makeevenhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
+\makeoddhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
 %\makeevenfoot{athgit}{}{}{\texttt{\footnotesize \VCRevision\ \VCModifiedText\ on \VCDateTEX}}
 %\makeoddfoot{athgit}{}{}{\texttt{\footnotesize \VCRevision\ \VCModifiedText\ on \VCDateTEX}}
 \makeevenfoot{athgit}{}{}{\texttt{\scriptsize \href{\GITURL/tree/\GITHash}{\VCRevision\ on \VCDateISO}}}
