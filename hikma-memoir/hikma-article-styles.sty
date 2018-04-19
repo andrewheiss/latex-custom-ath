@@ -60,18 +60,18 @@
 %---------------------
 \makechapterstyle{hikma-article}{
     % Heading 1
-    \setsecheadstyle{\large\sffamily\bfseries}
+    \setsecheadstyle{\Large\sffamily\bfseries}
     \setbeforesecskip{-4.5ex}  % Space before; if negative, next paragraph will not be indented
     \setaftersecskip{1ex}  % Space after
 
     % Heading 2
-    \setsubsecheadstyle{\normalsize\sffamily} 
+    \setsubsecheadstyle{\large\sffamily} 
     \setbeforesubsecskip{-2.5ex}
     \setaftersubsecskip{0.7ex}
 
     % Heading 3
     \setaftersubsubsecskip{-1em}  % Inline heading
-    \setsubsubsecheadstyle{\small\sffamily\bfseries} 
+    \setsubsubsecheadstyle{\normalsize\sffamily\bfseries} 
     \setbeforesubsubsecskip{1.5ex}
 
     % Captions
@@ -90,16 +90,16 @@
     % \renewcommand{\bibname}{\mdseries\Large\sffamily References}
 
     % Change formatting in title block
-    \pretitle{\par\vskip 3em \flushleft\LARGE\sffamily\bfseries}
+    \pretitle{\par\vskip 3em \flushleft\huge\sffamily\bfseries}
     \posttitle{\par\vskip 0.75em}
-    \preauthor{\flushleft\small}
+    \preauthor{\flushleft\sffamily}
     \postauthor{}
     \predate{\normalsize}
     \postdate{}
 
     % Abstract stuff
     \renewcommand{\abstractname}{\vspace{-\baselineskip}}  % Remove abstract title
-    \renewcommand{\abstracttextfont}{\normalfont\footnotesize}
+    \renewcommand{\abstracttextfont}{\small\sffamily}
 
     \epigraphfontsize{\normalfont\footnotesize}
     \setlength\epigraphwidth{8cm}
