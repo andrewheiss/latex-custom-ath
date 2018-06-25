@@ -280,8 +280,10 @@
     \markright{##1}}
 }
 \makepsmarks{athgit}{\@athgitmarks}
-\makeevenhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
-\makeoddhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
+% \makeevenhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
+% \makeoddhead{athgit}{\itshape\sffamily\footnotesize\leftmark}{}{\sffamily\footnotesize\thepage}
+\makeevenhead{athgit}{}{}{\sffamily\footnotesize\thepage}
+\makeoddhead{athgit}{}{}{\sffamily\footnotesize\thepage}
 %\makeevenfoot{athgit}{}{}{\texttt{\footnotesize \VCRevision\ \VCModifiedText\ on \VCDateTEX}}
 %\makeoddfoot{athgit}{}{}{\texttt{\footnotesize \VCRevision\ \VCModifiedText\ on \VCDateTEX}}
 \makeevenfoot{athgit}{}{}{\texttt{\scriptsize \href{\GITURL/tree/\GITHash}{\VCRevision\ on \VCDateISO}}}
